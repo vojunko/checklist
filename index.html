@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<div class="wrap">
+<div class="row">
+<button id="themeToggle">🌙 / ☀️ </button>
+</div>
+<header>
+<div>
+<head>
+<meta charset="UTF-8">
+<div class="title">CHECKLIST</div>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="subtitle" id="today"></div>
+</div>
+ <div class="row">
+        <button class="btn-outline small" id="exportBtn" title="Exportovat data do souboru JSON">Export</button>
+        <input id="importFile" type="file" accept="application/json" hidden />
+        <button class="btn-outline small" id="importBtn" title="Importovat data z JSON">Import</button>
+      </div>
+</header>
+
+
+
+<div class="cards">
+<!-- Checklist -->
+<section class="card" aria-labelledby="h-checklist">
+<h2 id="h-checklist">Daily checklist</h2>
+<div class="toolbar">
+<div class="row" style="flex:1">
+<input id="newItem" type="text" placeholder="Add task... (Enter)" aria-label="Přidat úkol" />
+<button id="addItem" class="btn-primary">Add</button>
+</div>
+<button id="clearChecks" class="btn-outline" title="Odznačit vše (jen pro dnešek)">Clear all</button>
+<button id="deleteDone" class="btn-danger" title="Smazat splněné položky (trvale)">Delete completed</button>
+</div>
+
+
+<div class="progress" aria-label="Progres dne">
+<span id="progressBar"></span>
+</div>
+<div class="badges" id="progressText"></div>
+
+
+<ul class="list" id="list" aria-live="polite"></ul>
+<div class="footnote">Checkboxes are automatically reset every day. The text of the tasks remains unchanged.</div>
+</section>
+
+
+<!-- Pravidla -->
+<section class="card" aria-labelledby="h-rules">
+<h2 id="h-rules">Rules for the next 3 months</h2>
+<div class="badges" id="period"></div>
+<textarea id="rules" placeholder="Write your rules for the next 3 months here... (automatically saved)"></textarea>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
