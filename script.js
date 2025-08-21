@@ -88,7 +88,7 @@ li.innerHTML = `
 <input type="text" value="${escapeHtml(it.text)}" aria-label="upravit text úkolu" />
 <span class="spacer"></span>
 <button class="btn-outline small" data-act="del" title="Smazat">Remove</button>
-<span class="muted small" title="Pořadí: ${idx+1}"></span>
+<span class="muted small" title="Pořadí: ${idx+1}">⇅</span>
 `;
 // events
 const cb = li.querySelector('input[type="checkbox"]');
@@ -315,5 +315,6 @@ themeToggle.addEventListener("click", () => {
   localStorage.setItem("theme", newTheme);
   updateThemeButton();
 });
+
 
 document.addEventListener('DOMContentLoaded', init);
