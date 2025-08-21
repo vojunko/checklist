@@ -352,3 +352,12 @@ ul.list {
   background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
   transform: translateY(-1px);
 }
+
+footer {
+  font-size: 14px;
+  text-align: center;
+  color: #888383;
+  margin-top:130px;
+  width: 100%;
+}
+
